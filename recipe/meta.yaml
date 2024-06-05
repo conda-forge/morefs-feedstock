@@ -33,7 +33,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/iterative/moref
+  home: https://github.com/iterative/morefs
   summary: A collection of self-contained fsspec-based filesystems
   license: Apache-2.0
   license_family: Apache
