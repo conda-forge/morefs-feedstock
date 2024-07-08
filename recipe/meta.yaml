@@ -1,5 +1,5 @@
 {% set name = "morefs" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/morefs-{{ version }}.tar.gz
-  sha256: 37581c7585cd8bf05dc8b4f27243825da51e2ee286d3ba6cbdc7d7f9356ac10d
+  sha256: 6119d12c975d1a7e89d0837c99cd5fc82e7e392e74ecb041634ab394d137f8e7
 
 build:
   noarch: python
