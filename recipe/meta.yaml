@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/morefs-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/morefs-{{ version }}.tar.gz
   sha256: 6119d12c975d1a7e89d0837c99cd5fc82e7e392e74ecb041634ab394d137f8e7
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=48
     - setuptools-scm >=6.3.1
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - fsspec
 
 test:
@@ -31,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/iterative/morefs
